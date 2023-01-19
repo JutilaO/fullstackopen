@@ -4,5 +4,5 @@ graph TD;
     A-->C;
     B-->D;
     C-->D;
-    penis<--siitin;
+    penis-->siitin;
 ```
