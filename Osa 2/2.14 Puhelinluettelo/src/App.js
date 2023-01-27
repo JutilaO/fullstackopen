@@ -86,7 +86,7 @@ if(filter.length > 0){
       <h2>Numbers</h2>
       <ul>
         {personsToShow.map(person =>
-        <li id={person.id}>
+        <li key={person.id}>
           <Person key={person.id} person={person}/>
           <Button key={person.name} handleClick={(event) => DeletePerson(person, event)} text="delete"/>
         </li>
