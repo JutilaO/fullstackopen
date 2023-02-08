@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
 
 
-const url = ""
+const password = "xHB9yWKwGYMse9c"
+const url = `mongodb+srv://Juti:${password}@memeral.mque6.mongodb.net/?retryWrites=true&w=majority`
+
 mongoose.set('strictQuery', false)
 mongoose.connect(url)
 
