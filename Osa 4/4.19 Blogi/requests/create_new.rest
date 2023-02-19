@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/blogs
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lc3RhcmkiLCJpZCI6IjYzZWY1NTAwMDkyY2Q2NTA1YWU4YTk2YiIsImlhdCI6MTY3NjYzMDAyM30.s3a1d-ZuXvmeXzwwHV3-2D8_aNyZ0waxmquM9S__yCo
+
+
+{
+    "title": "St33333r3i3ng",
+    "author": "tr3i3332ng",
+    "url": "Str3333333i3n2g",
+    "likes": 20,
+    "userId": "63ef479b0b463d03abd459e4"
+}
