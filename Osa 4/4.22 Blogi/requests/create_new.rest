@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlVzZXIiLCJpZCI6IjYzZjFmMjY4NDkyYTdhMjc4YjkwZjMyYyIsImlhdCI6MTY3NjgwMTE5MH0.JwjAk-jPodii4zCRbEP7Gu97pnBFAZGEEMFnsHfET7s
+
+{
+    "title": "Ameno",
+    "author": "Era",
+    "url": "---",
+    "likes": 20,
+    "userId": "63f1f268492a7a278b90f32c"
+}

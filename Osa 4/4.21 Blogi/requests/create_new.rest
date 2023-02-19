@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lc3RhcmkiLCJpZCI6IjYzZWY1NTAwMDkyY2Q2NTA1YWU4YTk2YiIsImlhdCI6MTY3NjgwMDg1Mn0.UmcBeQf8CMWAyg3wQ4BTvX_2CkdZ1v2RNFlJc-Lp9aY
+
+{
+    "title": "Ameno",
+    "author": "tr3i3332ng",
+    "url": "Str3333333i3n2g",
+    "likes": 20,
+    "userId": "63ef479b0b463d03abd459e4"
+}
