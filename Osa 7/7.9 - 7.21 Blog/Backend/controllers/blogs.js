@@ -1,0 +1,60 @@
+const router = require('express').Router()
+const Blog = require('../models/blog')
+
+router.get('/', async (request, response) => {
+  const blogs = await Blog.find({}).populate('user', {
+    username: 1,
+    name: 1,
+    id: 1,
+  })
+  response.json(blogs)
+})
+
+router.post('/', async (request, response) => {
+  const blog = new Blog(request.body)
+  const user = request.user
+  console.log(user)
+  blog.user = user._id
+
+  if (!blog.likes) blog.likes = 0
+  if (!blog.url || !blog.title)
+    return response.status(400).send({error: 'missing title or url'})
+
+  const savedBlog = await blog.save()
+  user.blogs = user.blogs.concat(savedBlog.id)
+  await user.save()
+
+  response.status(201).json(savedBlog)
+})
+
+router.delete('/:id', async (request, response) => {
+  const blog = await Blog.findById(request.params.id)
+  const user = request.user
+
+  if (blog.user.toString() === user.id) {
+    await Blog.findByIdAndRemove(request.params.id)
+    response.status(204).end()
+  } else {
+    response.status(401).json({error: 'unauthorized request'})
+  }
+})
+
+router.put('/:id', async (request, response) => {
+  const body = request.body
+  if(!body.comments) body.comments = []
+  const blog = await Blog.findByIdAndUpdate(
+    request.params.id,
+    {likes: body.likes, comments: body.comments},
+    {new: true}
+  )
+  response.json({
+    blog,
+  })
+})
+
+router.get('/:id', async (request, response) => {
+  const blog = await Blog.findById(request.params.id)
+  response.json(blog)
+})
+
+module.exports = router
