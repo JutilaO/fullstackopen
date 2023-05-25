@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhcmw0QGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE2ODUwMTQ3MzV9.-bQcqXHlfloeRKjvF5bVx2iMWglc0m0cN33dwOMvCS8
+
+{
+  "author": "Karlin blogi 2",
+  "url": "aaa joo",
+  "title": "viistöistä",
+  "year": 2022
+}

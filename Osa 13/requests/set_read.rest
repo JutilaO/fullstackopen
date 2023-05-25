@@ -1,0 +1,7 @@
+PUT http://localhost:3001/api/readingLists/1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhcmxAZ21haWwuY29tIiwiaWQiOjEsImlhdCI6MTY4NTAwNzczNX0.flzDUiiVJ2LNQCEOFvblMx_yNFOXLTCfZTEGgWE2Sok
+
+{
+  "read": true
+}
